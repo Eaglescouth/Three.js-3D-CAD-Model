@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-// 1. Import MediaPipe
 import { HandLandmarker, FilesetResolver } from "@mediapipe/tasks-vision";
 
 // --- 3D SETUP (Existing Code) ---

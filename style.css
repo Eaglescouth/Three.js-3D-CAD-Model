@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow: hidden; /* Stop scrollbars */
+    overflow: hidden;
 }
 
 #webcam {
@@ -9,19 +9,18 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure video fills screen without stretching */
-    z-index: -1; /* Push to the back */
-    transform: scaleX(-1); /* Mirror the camera (like a mirror) */
+    object-fit: cover;
+    z-index: -1;
+    transform: scaleX(-1);
 }
 
 canvas {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Sit on top */
+    z-index: 1;
 }
 
-/* The Glass Panel */
 #hud-panel {
     position: absolute;
     top: 20px;
@@ -30,10 +29,9 @@ canvas {
     padding: 20px;
     z-index: 10;
     
-    /* Glassmorphism */
     background: rgba(10, 10, 10, 0.6);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* For Safari */
+    -webkit-backdrop-filter: blur(12px);
     
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -43,7 +41,6 @@ canvas {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Header Section */
 .hud-header {
     display: flex;
     align-items: center;
@@ -54,7 +51,6 @@ canvas {
     padding-bottom: 10px;
 }
 
-/* The Glowing Dot */
 .status-dot {
     width: 8px;
     height: 8px;
@@ -65,19 +61,17 @@ canvas {
     animation: pulse 2s infinite;
 }
 
-/* Instructions */
 .instruction {
     font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 15px;
 }
 
-/* The Cyber Button */
 .cyber-btn {
     width: 100%;
     padding: 10px;
     background: transparent;
-    border: 1px solid #00ff41; /* Hacker Green */
+    border: 1px solid #00ff41;
     color: #00ff41;
     font-family: inherit;
     font-weight: bold;
@@ -89,11 +83,10 @@ canvas {
 
 .cyber-btn:hover {
     background: #00ff41;
-    color: #000; /* Black text on green bg */
+    color: #000;
     box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
 }
 
-/* Simple animation for the dot */
 @keyframes pulse {
     0% { opacity: 1; }
     50% { opacity: 0.5; }
