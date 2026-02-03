@@ -46,6 +46,13 @@ let dragOffset = { x: 0, y: 0 };
 const fileInput = document.getElementById("file-input");
 const loader = new GLTFLoader();
 
+// NEW: Link the custom button to the hidden input
+const uploadBtn = document.getElementById("upload-btn");
+
+uploadBtn.addEventListener("click", function () {
+  fileInput.click(); // Programmatically click the hidden input
+});
+
 // 1. Listen for file uploads
 fileInput.addEventListener("change", function (e) {
   const file = e.target.files[0];

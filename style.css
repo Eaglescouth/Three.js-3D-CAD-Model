@@ -21,14 +21,81 @@ canvas {
     z-index: 1; /* Sit on top */
 }
 
-#ui-container {
+/* The Glass Panel */
+#hud-panel {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 10; /* Make sure it sits ON TOP of the 3D scene */
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    border-radius: 8px;
-    color: white;
-    font-family: sans-serif;
+    width: 250px;
+    padding: 20px;
+    z-index: 10;
+    
+    /* Glassmorphism */
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari */
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Header Section */
+.hud-header {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* The Glowing Dot */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00ff41;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px #00ff41;
+    animation: pulse 2s infinite;
+}
+
+/* Instructions */
+.instruction {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px;
+}
+
+/* The Cyber Button */
+.cyber-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #00ff41; /* Hacker Green */
+    color: #00ff41;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cyber-btn:hover {
+    background: #00ff41;
+    color: #000; /* Black text on green bg */
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+/* Simple animation for the dot */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
