@@ -9,12 +9,14 @@
     {
       "imports": {
         "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+        "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/+esm"
       }
     }
   </script>
 </head>
 <body>
+  <video id="webcam" autoplay playsinline></video>
   <script type="module" src="script.js"></script>
 </body>
 </html>
